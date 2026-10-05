@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seguro con Quiñones | Vida Mujer</title>
+<style>
+:root{--navy:#071b3a;--blue:#0877d9;--pink:#d92f7d;--soft:#f7f8fc;--text:#17233d}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--soft);color:var(--text)}
+.hero{background:linear-gradient(135deg,#061735,#0a376f);color:#fff;padding:48px 20px 56px;text-align:center}
+.logo{font-weight:800;letter-spacing:.4px;font-size:18px}.hero h1{font-size:clamp(34px,7vw,58px);line-height:1.03;margin:22px auto 14px;max-width:850px}.hero h1 span{color:#f04b91}.hero p{max-width:720px;margin:auto;font-size:18px;line-height:1.55;color:#dce8f8}
+.wrap{max-width:1050px;margin:-25px auto 50px;padding:0 16px}.card{background:#fff;border-radius:24px;box-shadow:0 15px 45px #10254d18;padding:28px}.card h2{margin:0 0 8px;font-size:28px}.muted{color:#68758d;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}.field label{display:block;font-weight:700;margin-bottom:8px}.field input,.field select{width:100%;padding:15px 14px;border:1px solid #dbe3ef;border-radius:12px;font-size:16px;background:#fff}.amounts{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0 4px}.amount{border:1px solid #dbe3ef;background:#fff;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}.amount.active{background:var(--pink);color:#fff;border-color:var(--pink)}
+.btn{width:100%;border:0;border-radius:14px;padding:16px;background:linear-gradient(90deg,#d92f7d,#ed3f88);color:#fff;font-weight:800;font-size:17px;cursor:pointer;margin-top:20px}.result{display:none;margin-top:22px;padding:22px;border-radius:18px;background:#fdf0f6;border:1px solid #f5c9dc}.result strong{font-size:32px;color:var(--pink)}.result .wa{display:inline-block;text-decoration:none;background:#078c72;color:#fff;padding:13px 18px;border-radius:11px;font-weight:800;margin-top:12px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}.feature{background:#fff;border-radius:18px;padding:22px;text-align:center;box-shadow:0 8px 25px #10254d0d}.icon{font-size:30px}.feature h3{margin:9px 0 5px}.feature p{margin:0;color:#68758d;line-height:1.45}
+.note{font-size:12px;color:#8792a6;line-height:1.5;margin-top:24px}.footer{text-align:center;padding:28px;color:#8792a6;font-size:12px}
+@media(max-width:720px){.grid,.features{grid-template-columns:1fr}.hero{padding-top:34px}.card{padding:21px}.wrap{margin-top:-18px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="logo">SEGURO CON QUIÑONES</div>
+  <h1>Protección, ahorro y <span>tranquilidad</span> en un solo plan.</h1>
+  <p>Conoce una simulación educativa de ahorro para Vida Mujer y descubre cuánto podrías destinar a tu proyecto financiero.</p>
+</header>
+
+<main class="wrap">
+<section class="card">
+  <h2>Calcula tu escenario</h2>
+  <p class="muted">Selecciona una aportación mensual e indica tu edad. El resultado es una estimación educativa y no una cotización ni una promesa de rendimiento.</p>
+
+  <div class="field" style="margin-top:22px">
+    <label>Aportación mensual</label>
+    <div class="amounts">
+      <button class="amount active" data-value="1700">$1,700</button>
+      <button class="amount" data-value="2000">$2,000</button>
+      <button class="amount" data-value="2500">$2,500</button>
+      <button class="amount" data-value="3000">$3,000</button>
+      <button class="amount" data-value="4000">$4,000</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="field">
+      <label for="name">Nombre</label>
+      <input id="name" placeholder="Ej. Ana Pérez">
+    </div>
+    <div class="field">
+      <label for="age">Edad</label>
+      <input id="age" type="number" min="18" max="70" placeholder="Ej. 30">
+    </div>
+  </div>
+
+  <button class="btn" id="calc">Ver mi escenario</button>
+
+  <div class="result" id="result">
+    <div>En 20 años, aportando <b id="monthly"></b> al mes:</div>
+    <p><strong id="total"></strong></p>
+    <div class="muted">Este cálculo representa únicamente la suma de aportaciones, sin considerar rendimientos, costos, impuestos, inflación, beneficios de seguro ni condiciones contractuales.</div>
+    <a class="wa" id="wa" target="_blank" rel="noopener">Quiero una cotización personalizada por WhatsApp</a>
+  </div>
+
+  <div class="note">
+    * Simulación meramente ilustrativa. Los resultados reales dependen de las características, condiciones, edad, forma de pago y contratación del producto correspondiente. No constituye una oferta, garantía de rendimiento ni asesoría financiera personalizada.
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature"><div class="icon">🛡️</div><h3>Protección</h3><p>Conoce opciones para proteger a quienes más quieres.</p></div>
+  <div class="feature"><div class="icon">📈</div><h3>Ahorro</h3><p>Construye un objetivo de ahorro con disciplina.</p></div>
+  <div class="feature"><div class="icon">🏠</div><h3>Patrimonio</h3><p>Planea tus proyectos financieros a largo plazo.</p></div>
+</section>
+</main>
+
+<footer class="footer">Seguro con Quiñones · Asesor de seguros · San Luis Potosí, México</footer>
+
+<script>
+let selected = 1700;
+
+document.querySelectorAll('.amount').forEach(function(button) {
+  button.addEventListener('click', function() {
+    document.querySelectorAll('.amount').forEach(function(b) {
+      b.classList.remove('active');
+    });
+    button.classList.add('active');
+    selected = parseInt(button.getAttribute('data-value'), 10);
+  });
+});
+
+document.getElementById('calc').addEventListener('click', function() {
+  var name = document.getElementById('name').value.trim();
+  var age = parseInt(document.getElementById('age').value, 10);
+
+  if (!name) {
+    alert('Escribe tu nombre.');
+    return;
+  }
+
+  if (isNaN(age) || age < 18 || age > 70) {
+    alert('Ingresa una edad válida entre 18 y 70 años.');
+    return;
+  }
+
+  var total = selected * 12 * 20;
+  var money = new Intl.NumberFormat('es-MX', {
+    style: 'currency',
+    currency: 'MXN',
+    maximumFractionDigits: 0
+  });
+
+  document.getElementById('monthly').textContent = money.format(selected);
+  document.getElementById('total').textContent = money.format(total);
+
+  // WhatsApp: replace this number with your real WhatsApp number.
+  var phone = '524446000000';
+  var message = 'Hola Jacobo, soy ' + name +
+    '. Tengo ' + age +
+    ' años y quiero conocer una cotización personalizada de Vida Mujer con una aportación aproximada de $' +
+    selected.toLocaleString('es-MX') + ' al mes.';
+
+  document.getElementById('wa').href =
+    'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('result').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+});
+</script>
+</body>
+</html>
