@@ -7,262 +7,255 @@
 
 <style>
 :root{
---pink:#d52979;
---deep:#aa1459;
---pale:#fff0f5;
---ink:#242b40;
+  --pink:#d52979;
+  --deep:#aa1459;
+  --pale:#fff0f5;
+  --ink:#242b40;
 }
 
 *{box-sizing:border-box}
 
 body{
-margin:0;
-background:linear-gradient(#ffe7f0,#fff8fb);
-color:var(--ink);
-font-family:system-ui,-apple-system,Arial,sans-serif
+  margin:0;
+  background:linear-gradient(#ffe7f0,#fff8fb);
+  color:var(--ink);
+  font-family:system-ui,-apple-system,Arial,sans-serif;
 }
 
 header{
-text-align:center;
-padding:45px 20px 55px
+  text-align:center;
+  padding:45px 20px 55px;
 }
 
 header .pill{
-display:inline-block;
-border:3px solid #f4a8d0;
-border-radius:50px;
-background:white;
-padding:13px 23px;
-color:var(--deep);
-font-size:25px;
-font-weight:800
+  display:inline-block;
+  border:3px solid #f4a8d0;
+  border-radius:50px;
+  background:white;
+  padding:13px 23px;
+  color:var(--deep);
+  font-size:25px;
+  font-weight:800;
 }
 
 header p{
-color:var(--deep);
-font-weight:750
+  color:var(--deep);
+  font-weight:750;
 }
 
 .wrap{
-max-width:800px;
-margin:-25px auto 60px;
-padding:0 16px
+  max-width:800px;
+  margin:-25px auto 60px;
+  padding:0 16px;
 }
 
 .card{
-background:white;
-border-radius:22px;
-padding:25px;
-margin:18px 0;
-box-shadow:0 5px 20px #b8256220
+  background:white;
+  border-radius:22px;
+  padding:25px;
+  margin:18px 0;
+  box-shadow:0 5px 20px #b8256220;
 }
 
-h2{
-color:var(--deep)
-}
+h2{color:var(--deep)}
 
 label{
-display:block;
-font-weight:700;
-margin:14px 0 5px
+  display:block;
+  font-weight:700;
+  margin:14px 0 5px;
 }
 
 input{
-width:100%;
-border:1px solid #e7c5d4;
-border-radius:12px;
-padding:13px;
-font-size:17px
+  width:100%;
+  border:1px solid #e7c5d4;
+  border-radius:12px;
+  padding:13px;
+  font-size:17px;
 }
 
 .amount-title{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:10px;
-margin:20px 0 10px;
-font-weight:800
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin:20px 0 10px;
+  font-weight:800;
 }
 
 .amount-title span{
-color:var(--pink);
-background:#fff0f6;
-border:1px solid #f4c1d9;
-border-radius:25px;
-padding:8px 14px;
-font-size:14px
+  color:var(--pink);
+  background:#fff0f6;
+  border:1px solid #f4c1d9;
+  border-radius:25px;
+  padding:8px 14px;
+  font-size:14px;
 }
 
 .amounts{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:8px
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
 }
 
 .amount-btn{
-border:1px solid #dfe3eb;
-border-radius:14px;
-background:#fafbfc;
-color:var(--ink);
-padding:14px 6px;
-font-size:16px;
-font-weight:800;
-cursor:pointer
+  border:1px solid #dfe3eb;
+  border-radius:14px;
+  background:#fafbfc;
+  color:var(--ink);
+  padding:14px 6px;
+  font-size:16px;
+  font-weight:800;
+  cursor:pointer;
 }
 
 .amount-btn.active{
-background:linear-gradient(135deg,#e93b89,#c91d69);
-color:white;
-border-color:#e93b89;
-box-shadow:0 5px 12px #c91d6930
+  background:linear-gradient(135deg,#e93b89,#c91d69);
+  color:white;
+  border-color:#e93b89;
 }
 
 .selected{
-margin-top:10px;
-text-align:center;
-color:var(--deep);
-font-weight:800;
-font-size:15px
+  margin-top:10px;
+  text-align:center;
+  color:var(--deep);
+  font-weight:800;
+  font-size:15px;
 }
 
 .mainbtn,.cta{
-display:block;
-width:100%;
-border:0;
-border-radius:14px;
-background:var(--pink);
-color:white;
-padding:16px;
-text-align:center;
-font-size:17px;
-font-weight:800;
-text-decoration:none;
-margin-top:18px;
-cursor:pointer
+  display:block;
+  width:100%;
+  border:0;
+  border-radius:14px;
+  background:var(--pink);
+  color:white;
+  padding:16px;
+  text-align:center;
+  font-size:17px;
+  font-weight:800;
+  text-decoration:none;
+  margin-top:18px;
+  cursor:pointer;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:12px
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
 }
 
 .metric{
-padding:14px;
-background:var(--pale);
-border-radius:12px
+  padding:14px;
+  background:var(--pale);
+  border-radius:12px;
 }
 
 .metric small{
-display:block;
-color:#755468
+  display:block;
+  color:#755468;
 }
 
 .metric strong{
-display:block;
-margin-top:6px;
-font-size:20px;
-overflow-wrap:anywhere
+  display:block;
+  margin-top:6px;
+  font-size:20px;
+  overflow-wrap:anywhere;
 }
 
-#results{
-display:none
-}
+#results{display:none}
 
 .chart{
-display:flex;
-align-items:end;
-justify-content:space-around;
-gap:6px;
-height:270px;
-padding-top:30px;
-border-bottom:1px solid #e9c6d5
+  display:flex;
+  align-items:end;
+  justify-content:space-around;
+  gap:6px;
+  height:270px;
+  padding-top:30px;
+  border-bottom:1px solid #e9c6d5;
 }
 
 .item{
-flex:1;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:end;
-height:100%;
-min-width:0
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:end;
+  height:100%;
+  min-width:0;
 }
 
 .bar{
-width:65%;
-max-width:60px;
-background:linear-gradient(#f07db1,#c92370);
-border-radius:8px 8px 0 0
+  width:65%;
+  max-width:60px;
+  background:linear-gradient(#f07db1,#c92370);
+  border-radius:8px 8px 0 0;
 }
 
 .amount{
-font-size:11px;
-text-align:center;
-font-weight:750;
-color:var(--deep)
+  font-size:11px;
+  text-align:center;
+  font-weight:750;
+  color:var(--deep);
 }
 
 .axis{
-display:flex;
-justify-content:space-around;
-text-align:center;
-font-size:12px;
-margin-top:9px
+  display:flex;
+  justify-content:space-around;
+  text-align:center;
+  font-size:12px;
+  margin-top:9px;
 }
 
-.axis span{
-flex:1
-}
+.axis span{flex:1}
 
 .faq details{
-background:white;
-border-radius:18px;
-padding:19px 22px;
-margin:13px 0;
-box-shadow:0 3px 10px #b8256215
+  background:white;
+  border-radius:18px;
+  padding:19px 22px;
+  margin:13px 0;
+  box-shadow:0 3px 10px #b8256215;
 }
 
 .faq summary{
-font-size:18px;
-font-weight:800;
-color:var(--deep);
-cursor:pointer
+  font-size:18px;
+  font-weight:800;
+  color:var(--deep);
+  cursor:pointer;
 }
 
 .faq p{
-line-height:1.65;
-color:#50596d
+  line-height:1.65;
+  color:#50596d;
 }
 
 .note{
-font-size:12px;
-color:#6b6570;
-line-height:1.6
+  font-size:12px;
+  color:#6b6570;
+  line-height:1.6;
 }
 
 @media(max-width:600px){
-.amounts{
-grid-template-columns:repeat(3,1fr)
-}
+  .amounts{
+    grid-template-columns:repeat(3,1fr);
+  }
 
-.grid{
-grid-template-columns:1fr
-}
+  .grid{
+    grid-template-columns:1fr;
+  }
 
-header .pill{
-font-size:21px
-}
+  header .pill{
+    font-size:21px;
+  }
 
-.card{
-padding:19px
-}
+  .card{
+    padding:19px;
+  }
 }
 
 @media(max-width:380px){
-.amounts{
-grid-template-columns:repeat(2,1fr)
-}
+  .amounts{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 </style>
 </head>
@@ -271,21 +264,21 @@ grid-template-columns:repeat(2,1fr)
 
 <header>
 
-<div class="pill">
-Simulador Vida Mujer
-</div>
+  <div class="pill">
+    Simulador Vida Mujer
+  </div>
 
-<p>
-¡Empodérate y explora tu plan hoy mismo!
-</p>
+  <p>
+    ¡Empodérate y explora tu plan hoy mismo!
+  </p>
 
-<h1>
-Seguro con Quiñones
-</h1>
+  <h1>
+    Seguro con Quiñones
+  </h1>
 
-<p>
-Ingresa tus datos para visualizar una simulación ilustrativa.
-</p>
+  <p>
+    Ingresa tus datos para visualizar una simulación ilustrativa.
+  </p>
 
 </header>
 
@@ -293,290 +286,293 @@ Ingresa tus datos para visualizar una simulación ilustrativa.
 
 <section class="card">
 
-<h2>
-Calcula tu escenario
-</h2>
+  <h2>
+    Calcula tu escenario
+  </h2>
 
-<label for="name">
-Nombre
-</label>
+  <label for="name">
+    Nombre
+  </label>
 
-<input
-id="name"
-autocomplete="name"
-placeholder="Tu nombre"
->
+  <input
+    id="name"
+    autocomplete="name"
+    placeholder="Tu nombre"
+  >
 
-<label for="age">
-Edad
-</label>
+  <label for="age">
+    Edad
+  </label>
 
-<input
-id="age"
-type="number"
-min="18"
-max="70"
-placeholder="Ej. 30"
->
+  <input
+    id="age"
+    type="number"
+    min="18"
+    max="70"
+    placeholder="Ej. 30"
+  >
 
-<label for="phone">
-Número de WhatsApp (10 dígitos)
-</label>
+  <div class="amount-title">
 
-<input
-id="phone"
-type="tel"
-inputmode="numeric"
-autocomplete="tel"
-maxlength="10"
-placeholder="Ej. 4441234567"
->
+    <span>
+      Ahorro mensual
+    </span>
 
-<div class="amount-title">
+    <span>
+      Selecciona tu monto
+    </span>
 
-<span>
-Ahorro mensual
-</span>
+  </div>
 
-<span>
-Selecciona tu monto
-</span>
+  <div class="amounts">
 
-</div>
+    <button
+      type="button"
+      class="amount-btn active"
+      data-amount="1700"
+      onclick="selectAmount(this)">
+      $1,700
+    </button>
 
-<div class="amounts">
+    <button
+      type="button"
+      class="amount-btn"
+      data-amount="2000"
+      onclick="selectAmount(this)">
+      $2,000
+    </button>
 
-<button
-type="button"
-class="amount-btn active"
-data-amount="1700"
-onclick="selectAmount(this)"
->
-$1,700
-</button>
+    <button
+      type="button"
+      class="amount-btn"
+      data-amount="2500"
+      onclick="selectAmount(this)">
+      $2,500
+    </button>
 
-<button
-type="button"
-class="amount-btn"
-data-amount="2000"
-onclick="selectAmount(this)"
->
-$2,000
-</button>
+    <button
+      type="button"
+      class="amount-btn"
+      data-amount="3000"
+      onclick="selectAmount(this)">
+      $3,000
+    </button>
 
-<button
-type="button"
-class="amount-btn"
-data-amount="2500"
-onclick="selectAmount(this)"
->
-$2,500
-</button>
+    <button
+      type="button"
+      class="amount-btn"
+      data-amount="4000"
+      onclick="selectAmount(this)">
+      $4,000
+    </button>
 
-<button
-type="button"
-class="amount-btn"
-data-amount="3000"
-onclick="selectAmount(this)"
->
-$3,000
-</button>
+  </div>
 
-<button
-type="button"
-class="amount-btn"
-data-amount="4000"
-onclick="selectAmount(this)"
->
-$4,000
-</button>
+  <div class="selected">
 
-</div>
+    Monto seleccionado:
 
-<div class="selected">
-Monto seleccionado:
-<span id="selectedAmount">
-$1,700
-</span>
-al mes
-</div>
+    <span id="selectedAmount">
+      $1,700
+    </span>
 
-<button
-class="mainbtn"
-type="button"
-onclick="calculate()"
->
-Ver mi simulación
-</button>
+    al mes
 
-<p class="note">
-Tus datos permanecen en tu navegador. Solo se compartirán contigo y con el asesor si eliges enviar el mensaje por WhatsApp.
-</p>
+  </div>
+
+  <button
+    class="mainbtn"
+    type="button"
+    onclick="calculate()">
+
+    Ver mi simulación
+
+  </button>
+
+  <p class="note">
+
+    No necesitas dejar tu número de celular.
+    Al terminar la simulación puedes enviarme
+    directamente el resultado por WhatsApp.
+
+  </p>
 
 </section>
 
 
-<section
-id="results"
-class="card"
->
+<section id="results" class="card">
 
-<h2>
-Tu escenario ilustrativo
-</h2>
+  <h2>
+    Tu escenario ilustrativo
+  </h2>
 
-<div class="grid">
+  <div class="grid">
 
-<div class="metric">
-<small>
-Aportación mensual
-</small>
-<strong id="m"></strong>
-</div>
+    <div class="metric">
+      <small>Aportación mensual</small>
+      <strong id="m"></strong>
+    </div>
 
-<div class="metric">
-<small>
-UDIS mensuales iniciales
-</small>
-<strong id="u"></strong>
-</div>
+    <div class="metric">
+      <small>UDIS mensuales iniciales</small>
+      <strong id="u"></strong>
+    </div>
 
-<div class="metric">
-<small>
-UDIS acumuladas
-</small>
-<strong id="totalU"></strong>
-</div>
+    <div class="metric">
+      <small>UDIS acumuladas</small>
+      <strong id="totalU"></strong>
+    </div>
 
-<div class="metric">
-<small>
-Total aportado
-</small>
-<strong id="paid"></strong>
-</div>
+    <div class="metric">
+      <small>Total aportado</small>
+      <strong id="paid"></strong>
+    </div>
 
-<div class="metric">
-<small>
-UDI proyectada al año 20
-</small>
-<strong id="futureU"></strong>
-</div>
+    <div class="metric">
+      <small>UDI proyectada al año 20</small>
+      <strong id="futureU"></strong>
+    </div>
 
-<div class="metric">
-<small>
-Valor ilustrativo al año 20
-</small>
-<strong id="future"></strong>
-</div>
+    <div class="metric">
+      <small>Valor ilustrativo al año 20</small>
+      <strong id="future"></strong>
+    </div>
 
-</div>
+  </div>
 
 
-<h2>
-Evolución cada 5 años
-</h2>
+  <h2>
+    Evolución cada 5 años
+  </h2>
 
-<div
-class="chart"
-id="chart"
->
-</div>
+  <div
+    class="chart"
+    id="chart">
+  </div>
 
-<div class="axis">
+  <div class="axis">
 
-<span>Año 0</span>
-<span>Año 5</span>
-<span>Año 10</span>
-<span>Año 15</span>
-<span>Año 20</span>
+    <span>Año 0</span>
+    <span>Año 5</span>
+    <span>Año 10</span>
+    <span>Año 15</span>
+    <span>Año 20</span>
 
-</div>
-
-
-<a
-class="cta"
-id="wa"
-href="https://wa.me/524448296569?text=Hola%20Jacobo%2C%20hice%20mi%20simulaci%C3%B3n%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20informaci%C3%B3n."
-target="_blank"
-rel="noopener"
->
-Enviar mi simulación por WhatsApp
-</a>
+  </div>
 
 
-<p class="note">
+  <a
+    class="cta"
+    id="wa"
+    href="#"
+    target="_blank"
+    rel="noopener">
 
-<strong>Importante:</strong>
+    Enviar mi simulación por WhatsApp
 
-Esta calculadora es educativa e ilustrativa.
+  </a>
 
-Utiliza un supuesto de apreciación anual de la UDI de 4.5%.
 
-No representa una cotización, rendimiento garantizado,
-valor de rescate ni beneficio contractual.
+  <p class="note">
 
-</p>
+    <strong>Importante:</strong>
+
+    Esta calculadora es educativa e ilustrativa.
+    Utiliza un supuesto de apreciación anual de la UDI
+    de 4.5%.
+
+    No representa una cotización, rendimiento garantizado,
+    valor de rescate ni beneficio contractual.
+
+  </p>
 
 </section>
 
 
 <section class="faq">
 
-<h2>
-Preguntas frecuentes
-</h2>
+  <h2>
+    Preguntas frecuentes
+  </h2>
 
 
-<details>
+  <details>
 
-<summary>
-¿Qué pasa si un mes se me complica aportar?
-</summary>
+    <summary>
+      ¿Qué pasa si quiero conocer mi propuesta real?
+    </summary>
 
-<p>
-No te preocupes. Vida Mujer cuenta con opciones de flexibilidad como periodos de gracia y alternativas para ajustar tus aportaciones temporalmente sin perder tu seguro ni los beneficios acumulados.
-</p>
+    <p>
 
-</details>
+      Esta herramienta sirve únicamente para visualizar
+      un escenario matemático.
 
+      Si quieres conocer las condiciones, beneficios,
+      primas y valores reales de una póliza, puedo
+      preparar una cotización personalizada.
 
-<details>
+    </p>
 
-<summary>
-¿Mi dinero está protegido contra la inflación?
-</summary>
-
-<p>
-¡Por supuesto! Tu plan se ajusta anualmente de acuerdo a la inflación (UDIs o pesos constantes), asegurando que tu dinero no pierda poder adquisitivo y crezca de forma segura con el tiempo.
-</p>
-
-</details>
+  </details>
 
 
-<details>
+  <details>
 
-<summary>
-¿Por qué considerar Vida Mujer en lugar de dejar el dinero en el banco?
-</summary>
+    <summary>
+      ¿Por qué se utilizan UDIS?
+    </summary>
 
-<p>
-Mientras el banco solo guarda tu dinero (y pierde valor por inflación), Vida Mujer te ofrece rendimiento garantizado y protección oncológica y de vida desde el primer día. ¡Tu dinero trabaja y te protege al mismo tiempo!
-</p>
+    <p>
 
-</details>
+      Las UDIS son una unidad de cuenta cuyo valor
+      se actualiza con base en la inflación.
+
+      En esta calculadora se utiliza una UDI de referencia
+      y un supuesto de crecimiento anual únicamente
+      para fines ilustrativos.
+
+    </p>
+
+  </details>
 
 
-<details>
+  <details>
 
-<summary>
-¿Qué pasa con mi ahorro al final de los 20 años?
-</summary>
+    <summary>
+      ¿El resultado de esta calculadora está garantizado?
+    </summary>
 
-<p>
-Al llegar al final de tu plan, recibes el monto total de tu ahorro más el rendimiento acumulado. Lo mejor de todo es que este monto (dote) se entrega libre de impuestos para que lo disfrutes en tus grandes proyectos.
-</p>
+    <p>
 
-</details>
+      No.
+
+      El resultado mostrado es una simulación matemática
+      y no constituye una promesa de rendimiento ni
+      sustituye una cotización o ilustración contractual
+      de la aseguradora.
+
+    </p>
+
+  </details>
+
+
+  <details>
+
+    <summary>
+      ¿Cómo puedo recibir una cotización?
+    </summary>
+
+    <p>
+
+      Después de realizar tu simulación puedes enviarme
+      el resultado directamente por WhatsApp.
+
+      Con esos datos puedo orientarte y, si lo deseas,
+      preparar una propuesta personalizada.
+
+    </p>
+
+  </details>
 
 </section>
 
@@ -591,246 +587,268 @@ const R = 0.045;
 
 const Y = 20;
 
+const WHATSAPP = '524448296569';
+
 let selected = 1700;
 
 
 const money = n =>
-n.toLocaleString(
-'es-MX',
-{
-style:'currency',
-currency:'MXN',
-maximumFractionDigits:0
-}
-);
+
+  n.toLocaleString(
+    'es-MX',
+    {
+      style:'currency',
+      currency:'MXN',
+      maximumFractionDigits:0
+    }
+  );
 
 
 const number = n =>
-n.toLocaleString(
-'es-MX',
-{
-maximumFractionDigits:2
-}
-);
+
+  n.toLocaleString(
+    'es-MX',
+    {
+      maximumFractionDigits:2
+    }
+  );
 
 
 function selectAmount(btn){
 
-document
-.querySelectorAll('.amount-btn')
-.forEach(
-b => b.classList.remove('active')
-);
+  document
+    .querySelectorAll('.amount-btn')
+    .forEach(
+      b => b.classList.remove('active')
+    );
 
-btn.classList.add('active');
+  btn.classList.add('active');
 
-selected = Number(
-btn.dataset.amount
-);
+  selected =
+    Number(btn.dataset.amount);
 
-document
-.getElementById('selectedAmount')
-.textContent = money(selected);
+  document
+    .getElementById('selectedAmount')
+    .textContent =
+    money(selected);
 
 }
 
 
 function calculate(){
 
-const name =
-document
-.getElementById('name')
-.value
-.trim();
-
-const age =
-Number(
-document
-.getElementById('age')
-.value
-);
-
-const phone =
-document
-.getElementById('phone')
-.value
-.replace(/\D/g,'');
+  const name =
+    document
+      .getElementById('name')
+      .value
+      .trim();
 
 
-if(!name){
-
-alert('Ingresa tu nombre.');
-
-return;
-
-}
-
-
-if(
-!Number.isInteger(age) ||
-age < 18 ||
-age > 70
-){
-
-alert(
-'Ingresa una edad válida de 18 a 70 años.'
-);
-
-return;
-
-}
+  const age =
+    Number(
+      document
+        .getElementById('age')
+        .value
+    );
 
 
-if(
-! /^\d{10}$/.test(phone)
-){
+  if(!name){
 
-alert(
-'Ingresa un número de WhatsApp de 10 dígitos.'
-);
+    alert(
+      'Ingresa tu nombre.'
+    );
 
-return;
-
-}
+    return;
+  }
 
 
-const monthly = selected;
+  if(
+    !Number.isInteger(age) ||
+    age < 18 ||
+    age > 70
+  ){
 
-const units =
-monthly / UDI;
+    alert(
+      'Ingresa una edad válida de 18 a 70 años.'
+    );
 
-const acc =
-units * 12 * Y;
-
-const paid =
-monthly * 12 * Y;
-
-const price =
-UDI *
-Math.pow(
-1 + R,
-Y
-);
-
-const final =
-acc * price;
+    return;
+  }
 
 
-document
-.getElementById('m')
-.textContent =
-money(monthly);
+  const monthly = selected;
 
 
-document
-.getElementById('u')
-.textContent =
-number(units) + ' UDIS';
+  /*
+    MODELO ILUSTRATIVO
+
+    Convierte la aportación mensual inicial
+    a UDIS y proyecta el valor de la UDI
+    utilizando un supuesto anual de 4.5%.
+
+    NO representa una cotización contractual.
+  */
 
 
-document
-.getElementById('totalU')
-.textContent =
-number(acc) + ' UDIS';
+  const units =
+    monthly / UDI;
 
 
-document
-.getElementById('paid')
-.textContent =
-money(paid);
+  const acc =
+    units * 12 * Y;
 
 
-document
-.getElementById('futureU')
-.textContent =
-'$' + price.toFixed(2);
+  const paid =
+    monthly * 12 * Y;
 
 
-document
-.getElementById('future')
-.textContent =
-money(final);
+  const price =
+    UDI *
+    Math.pow(
+      1 + R,
+      Y
+    );
 
 
-const years =
-[0,5,10,15,20];
+  const final =
+    acc * price;
 
 
-const values =
-years.map(
-y =>
-units *
-12 *
-y *
-UDI *
-Math.pow(
-1 + R,
-y
-)
-);
+  document
+    .getElementById('m')
+    .textContent =
+    money(monthly);
 
 
-const max =
-Math.max(
-...values,
-1
-);
+  document
+    .getElementById('u')
+    .textContent =
+    number(units) +
+    ' UDIS';
 
 
-const chart =
-document.getElementById('chart');
-
-chart.innerHTML = '';
-
-
-years.forEach(
-(year,i) => {
-
-const item =
-document.createElement('div');
-
-item.className =
-'item';
+  document
+    .getElementById('totalU')
+    .textContent =
+    number(acc) +
+    ' UDIS';
 
 
-const value =
-document.createElement('span');
-
-value.className =
-'amount';
-
-value.textContent =
-money(values[i]);
+  document
+    .getElementById('paid')
+    .textContent =
+    money(paid);
 
 
-const bar =
-document.createElement('div');
-
-bar.className =
-'bar';
-
-bar.style.height =
-Math.max(
-3,
-Math.round(
-values[i] /
-max *
-205
-)
-) + 'px';
+  document
+    .getElementById('futureU')
+    .textContent =
+    '$' +
+    price.toFixed(2);
 
 
-item.append(
-value,
-bar
-);
-
-chart.append(item);
-
-});
+  document
+    .getElementById('future')
+    .textContent =
+    money(final);
 
 
-const message =
+  const years =
+    [0,5,10,15,20];
+
+
+  const values =
+    years.map(
+      y =>
+
+        units *
+        12 *
+        y *
+        UDI *
+        Math.pow(
+          1 + R,
+          y
+        )
+    );
+
+
+  const max =
+    Math.max(
+      ...values,
+      1
+    );
+
+
+  const chart =
+    document
+      .getElementById('chart');
+
+
+  chart.innerHTML = '';
+
+
+  years.forEach(
+    (year,i) => {
+
+      const item =
+        document.createElement(
+          'div'
+        );
+
+      item.className =
+        'item';
+
+
+      const value =
+        document.createElement(
+          'span'
+        );
+
+      value.className =
+        'amount';
+
+      value.textContent =
+        money(values[i]);
+
+
+      const bar =
+        document.createElement(
+          'div'
+        );
+
+      bar.className =
+        'bar';
+
+
+      bar.style.height =
+
+        Math.max(
+          3,
+          Math.round(
+            values[i] /
+            max *
+            205
+          )
+        ) +
+        'px';
+
+
+      item.append(
+        value,
+        bar
+      );
+
+
+      chart.append(
+        item
+      );
+
+    }
+  );
+
+
+  const message =
+
 `Hola, soy ${name}. Me interesa conocer una propuesta de Vida Mujer.
 
 Edad: ${age}
@@ -841,24 +859,29 @@ Valor ilustrativo al año 20: ${money(final)}
 Realicé la simulación en Seguro con Quiñones y me gustaría recibir una cotización personalizada.`;
 
 
-document
-.getElementById('wa')
-.href =
-'https://api.whatsapp.com/send?text=' +
-encodeURIComponent(message);
+  document
+    .getElementById('wa')
+    .href =
+
+    'https://wa.me/' +
+    WHATSAPP +
+    '?text=' +
+    encodeURIComponent(
+      message
+    );
 
 
-document
-.getElementById('results')
-.style.display =
-'block';
+  document
+    .getElementById('results')
+    .style.display =
+    'block';
 
 
-document
-.getElementById('results')
-.scrollIntoView({
-behavior:'smooth'
-});
+  document
+    .getElementById('results')
+    .scrollIntoView({
+      behavior:'smooth'
+    });
 
 }
 
