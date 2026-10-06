@@ -1,132 +1,347 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seguro con Quiñones | Vida Mujer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seguro con Quiñones | Calculadora UDIS</title>
+
 <style>
-:root{--navy:#071b3a;--blue:#0877d9;--pink:#d92f7d;--soft:#f7f8fc;--text:#17233d}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--soft);color:var(--text)}
-.hero{background:linear-gradient(135deg,#061735,#0a376f);color:#fff;padding:48px 20px 56px;text-align:center}
-.logo{font-weight:800;letter-spacing:.4px;font-size:18px}.hero h1{font-size:clamp(34px,7vw,58px);line-height:1.03;margin:22px auto 14px;max-width:850px}.hero h1 span{color:#f04b91}.hero p{max-width:720px;margin:auto;font-size:18px;line-height:1.55;color:#dce8f8}
-.wrap{max-width:1050px;margin:-25px auto 50px;padding:0 16px}.card{background:#fff;border-radius:24px;box-shadow:0 15px 45px #10254d18;padding:28px}.card h2{margin:0 0 8px;font-size:28px}.muted{color:#68758d;line-height:1.5}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}.field label{display:block;font-weight:700;margin-bottom:8px}.field input,.field select{width:100%;padding:15px 14px;border:1px solid #dbe3ef;border-radius:12px;font-size:16px;background:#fff}.amounts{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0 4px}.amount{border:1px solid #dbe3ef;background:#fff;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}.amount.active{background:var(--pink);color:#fff;border-color:var(--pink)}
-.btn{width:100%;border:0;border-radius:14px;padding:16px;background:linear-gradient(90deg,#d92f7d,#ed3f88);color:#fff;font-weight:800;font-size:17px;cursor:pointer;margin-top:20px}.result{display:none;margin-top:22px;padding:22px;border-radius:18px;background:#fdf0f6;border:1px solid #f5c9dc}.result strong{font-size:32px;color:var(--pink)}.result .wa{display:inline-block;text-decoration:none;background:#078c72;color:#fff;padding:13px 18px;border-radius:11px;font-weight:800;margin-top:12px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}.feature{background:#fff;border-radius:18px;padding:22px;text-align:center;box-shadow:0 8px 25px #10254d0d}.icon{font-size:30px}.feature h3{margin:9px 0 5px}.feature p{margin:0;color:#68758d;line-height:1.45}
-.note{font-size:12px;color:#8792a6;line-height:1.5;margin-top:24px}.footer{text-align:center;padding:28px;color:#8792a6;font-size:12px}
-@media(max-width:720px){.grid,.features{grid-template-columns:1fr}.hero{padding-top:34px}.card{padding:21px}.wrap{margin-top:-18px}}
+:root{
+--navy:#071b3a;
+--blue:#0877d9;
+--light:#f4f7fb;
+--green:#087f5b;
+--text:#172033;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+background:var(--light);
+color:var(--text);
+}
+.hero{
+background:linear-gradient(135deg,#061735,#0b4d91);
+color:white;
+padding:42px 20px 55px;
+text-align:center;
+}
+.logo{
+font-weight:800;
+letter-spacing:2px;
+font-size:18px;
+margin-bottom:18px;
+}
+.hero h1{
+font-size:30px;
+margin:0 auto 12px;
+max-width:650px;
+}
+.hero p{
+margin:0 auto;
+max-width:650px;
+line-height:1.5;
+opacity:.92;
+}
+.wrap{
+max-width:900px;
+margin:-28px auto 40px;
+padding:0 18px;
+}
+.card{
+background:white;
+border-radius:20px;
+padding:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+margin-bottom:18px;
+}
+h2{margin-top:0}
+label{
+display:block;
+font-weight:700;
+margin:16px 0 7px;
+}
+input{
+width:100%;
+padding:15px;
+border:1px solid #d7deea;
+border-radius:12px;
+font-size:17px;
+}
+.btn{
+width:100%;
+border:0;
+border-radius:13px;
+padding:16px;
+background:var(--blue);
+color:white;
+font-size:17px;
+font-weight:800;
+margin-top:20px;
+}
+.result{
+display:none;
+}
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:20px;
+}
+.box{
+background:#f4f7fb;
+border-radius:14px;
+padding:16px;
+}
+.box small{
+display:block;
+color:#667085;
+margin-bottom:6px;
+}
+.box strong{
+font-size:21px;
+}
+.highlight{
+background:#eaf7f2;
+border:1px solid #b7e1d0;
+}
+.whatsapp{
+display:block;
+text-align:center;
+text-decoration:none;
+background:#168c4b;
+color:white;
+font-weight:800;
+padding:16px;
+border-radius:13px;
+margin-top:20px;
+}
+.note{
+font-size:12px;
+line-height:1.5;
+color:#667085;
+margin-top:18px;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:18px;
+font-size:14px;
+}
+th,td{
+padding:10px 7px;
+border-bottom:1px solid #e5e7eb;
+text-align:right;
+}
+th:first-child,td:first-child{text-align:left}
+@media(max-width:600px){
+.grid{grid-template-columns:1fr}
+.hero h1{font-size:26px}
+.card{padding:20px}
+}
 </style>
 </head>
+
 <body>
+
 <header class="hero">
-  <div class="logo">SEGURO CON QUIÑONES</div>
-  <h1>Protección, ahorro y <span>tranquilidad</span> en un solo plan.</h1>
-  <p>Conoce una simulación educativa de ahorro para Vida Mujer y descubre cuánto podrías destinar a tu proyecto financiero.</p>
+<div class="logo">SEGURO CON QUIÑONES</div>
+<h1>Protección, ahorro y patrimonio</h1>
+<p>
+Conoce un escenario ilustrativo de cómo una aportación mensual
+puede expresarse en UDIS y proyectarse a 20 años.
+</p>
 </header>
 
 <main class="wrap">
+
 <section class="card">
-  <h2>Calcula tu escenario</h2>
-  <p class="muted">Selecciona una aportación mensual e indica tu edad. El resultado es una estimación educativa y no una cotización ni una promesa de rendimiento.</p>
+<h2>Calcula tu escenario</h2>
 
-  <div class="field" style="margin-top:22px">
-    <label>Aportación mensual</label>
-    <div class="amounts">
-      <button class="amount active" data-value="1700">$1,700</button>
-      <button class="amount" data-value="2000">$2,000</button>
-      <button class="amount" data-value="2500">$2,500</button>
-      <button class="amount" data-value="3000">$3,000</button>
-      <button class="amount" data-value="4000">$4,000</button>
-    </div>
-  </div>
+<label for="nombre">Tu nombre</label>
+<input id="nombre" type="text" placeholder="Ej. Juan">
 
-  <div class="grid">
-    <div class="field">
-      <label for="name">Nombre</label>
-      <input id="name" placeholder="Ej. Ana Pérez">
-    </div>
-    <div class="field">
-      <label for="age">Edad</label>
-      <input id="age" type="number" min="18" max="70" placeholder="Ej. 30">
-    </div>
-  </div>
+<label for="edad">Edad</label>
+<input id="edad" type="number" min="18" max="70" placeholder="Ej. 30">
 
-  <button class="btn" id="calc">Ver mi escenario</button>
+<label for="mensual">Aportación mensual</label>
+<input id="mensual" type="number" min="500" step="100" value="1700">
 
-  <div class="result" id="result">
-    <div>En 20 años, aportando <b id="monthly"></b> al mes:</div>
-    <p><strong id="total"></strong></p>
-    <div class="muted">Este cálculo representa únicamente la suma de aportaciones, sin considerar rendimientos, costos, impuestos, inflación, beneficios de seguro ni condiciones contractuales.</div>
-    <a class="wa" id="wa" target="_blank" rel="noopener">Quiero una cotización personalizada por WhatsApp</a>
-  </div>
-
-  <div class="note">
-    * Simulación meramente ilustrativa. Los resultados reales dependen de las características, condiciones, edad, forma de pago y contratación del producto correspondiente. No constituye una oferta, garantía de rendimiento ni asesoría financiera personalizada.
-  </div>
+<button class="btn" onclick="calcular()">
+Ver mi escenario
+</button>
 </section>
 
-<section class="features">
-  <div class="feature"><div class="icon">🛡️</div><h3>Protección</h3><p>Conoce opciones para proteger a quienes más quieres.</p></div>
-  <div class="feature"><div class="icon">📈</div><h3>Ahorro</h3><p>Construye un objetivo de ahorro con disciplina.</p></div>
-  <div class="feature"><div class="icon">🏠</div><h3>Patrimonio</h3><p>Planea tus proyectos financieros a largo plazo.</p></div>
+<section id="resultado" class="card result">
+
+<h2>Tu escenario ilustrativo</h2>
+
+<div class="grid">
+
+<div class="box">
+<small>Aportación mensual</small>
+<strong id="rMensual"></strong>
+</div>
+
+<div class="box">
+<small>UDIS mensuales</small>
+<strong id="rUdiMes"></strong>
+</div>
+
+<div class="box">
+<small>UDIS acumuladas en 20 años</small>
+<strong id="rUdiTotal"></strong>
+</div>
+
+<div class="box">
+<small>Total aportado</small>
+<strong id="rAportado"></strong>
+</div>
+
+<div class="box highlight">
+<small>UDI estimada año 20</small>
+<strong id="rUdiFutura"></strong>
+</div>
+
+<div class="box highlight">
+<small>Valor estimado año 20</small>
+<strong id="rValor"></strong>
+</div>
+
+</div>
+
+<h3>Evolución estimada</h3>
+
+<table>
+<thead>
+<tr>
+<th>Año</th>
+<th>Valor UDI</th>
+<th>UDIS acumuladas</th>
+<th>Valor en pesos</th>
+</tr>
+</thead>
+<tbody id="tabla"></tbody>
+</table>
+
+<a class="whatsapp"
+href="https://wa.me/?text=Hola%20Quinones,%20quiero%20conocer%20mi%20escenario%20de%20proteccion%20y%20ahorro."
+target="_blank">
+Quiero conocer mi opción personalizada
+</a>
+
+<p class="note">
+<strong>Importante:</strong> Esta calculadora tiene fines
+educativos e ilustrativos. Utiliza como referencia un valor de UDI
+de $8.845713 correspondiente al 6 de octubre de 2026 y un supuesto
+de crecimiento anual de 4.5%. El crecimiento de 4.5% no es una
+garantía de rendimiento ni representa necesariamente las condiciones
+de un producto de seguros. La cotización y los valores reales
+dependen del producto, edad, condiciones y propuesta individual.
+</p>
+
 </section>
+
 </main>
 
-<footer class="footer">Seguro con Quiñones · Asesor de seguros · San Luis Potosí, México</footer>
-
 <script>
-let selected = 1700;
 
-document.querySelectorAll('.amount').forEach(function(button) {
-  button.addEventListener('click', function() {
-    document.querySelectorAll('.amount').forEach(function(b) {
-      b.classList.remove('active');
-    });
-    button.classList.add('active');
-    selected = parseInt(button.getAttribute('data-value'), 10);
-  });
+const UDI_ACTUAL = 8.845713;
+const CRECIMIENTO = 0.045;
+const ANIOS = 20;
+
+function dinero(valor){
+return valor.toLocaleString("es-MX",{
+style:"currency",
+currency:"MXN",
+maximumFractionDigits:0
 });
+}
 
-document.getElementById('calc').addEventListener('click', function() {
-  var name = document.getElementById('name').value.trim();
-  var age = parseInt(document.getElementById('age').value, 10);
-
-  if (!name) {
-    alert('Escribe tu nombre.');
-    return;
-  }
-
-  if (isNaN(age) || age < 18 || age > 70) {
-    alert('Ingresa una edad válida entre 18 y 70 años.');
-    return;
-  }
-
-  var total = selected * 12 * 20;
-  var money = new Intl.NumberFormat('es-MX', {
-    style: 'currency',
-    currency: 'MXN',
-    maximumFractionDigits: 0
-  });
-
-  document.getElementById('monthly').textContent = money.format(selected);
-  document.getElementById('total').textContent = money.format(total);
-
-  // WhatsApp: replace this number with your real WhatsApp number.
-  var phone = '524446000000';
-  var message = 'Hola Jacobo, soy ' + name +
-    '. Tengo ' + age +
-    ' años y quiero conocer una cotización personalizada de Vida Mujer con una aportación aproximada de $' +
-    selected.toLocaleString('es-MX') + ' al mes.';
-
-  document.getElementById('wa').href =
-    'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
-
-  document.getElementById('result').style.display = 'block';
-  document.getElementById('result').scrollIntoView({
-    behavior: 'smooth',
-    block: 'center'
-  });
+function numero(valor){
+return valor.toLocaleString("es-MX",{
+maximumFractionDigits:2
 });
+}
+
+function calcular(){
+
+const nombre = document.getElementById("nombre").value.trim();
+const edad = Number(document.getElementById("edad").value);
+const mensual = Number(document.getElementById("mensual").value);
+
+if(!mensual || mensual < 500){
+alert("Ingresa una aportación mensual válida.");
+return;
+}
+
+if(!edad || edad < 18 || edad > 70){
+alert("Ingresa una edad válida entre 18 y 70 años.");
+return;
+}
+
+const udisMensuales = mensual / UDI_ACTUAL;
+const udisAnuales = udisMensuales * 12;
+
+const totalAportado = mensual * 12 * ANIOS;
+const udisTotales = udisMensuales * 12 * ANIOS;
+
+const udiFutura =
+UDI_ACTUAL * Math.pow(1 + CRECIMIENTO, ANIOS);
+
+const valorFuturo =
+udisTotales * udiFutura;
+
+document.getElementById("rMensual").textContent =
+dinero(mensual);
+
+document.getElementById("rUdiMes").textContent =
+numero(udisMensuales) + " UDIS";
+
+document.getElementById("rUdiTotal").textContent =
+numero(udisTotales) + " UDIS";
+
+document.getElementById("rAportado").textContent =
+dinero(totalAportado);
+
+document.getElementById("rUdiFutura").textContent =
+"$" + udiFutura.toFixed(2);
+
+document.getElementById("rValor").textContent =
+dinero(valorFuturo);
+
+let filas = "";
+
+for(let anio = 0; anio <= ANIOS; anio++){
+
+const udiAnio =
+UDI_ACTUAL * Math.pow(1 + CRECIMIENTO, anio);
+
+const udisAcumuladas =
+udisMensuales * 12 * anio;
+
+const valorPesos =
+udisAcumuladas * udiAnio;
+
+filas += `
+<tr>
+<td>${anio}</td>
+<td>$${udiAnio.toFixed(2)}</td>
+<td>${numero(udisAcumuladas)}</td>
+<td>${dinero(valorPesos)}</td>
+</tr>`;
+}
+
+document.getElementById("tabla").innerHTML = filas;
+
+document.getElementById("resultado").style.display = "block";
+
+document.getElementById("resultado")
+.scrollIntoView({behavior:"smooth"});
+
+}
+
 </script>
+
 </body>
 </html>
